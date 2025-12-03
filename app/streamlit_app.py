@@ -6,7 +6,8 @@ import numpy as np
 st.title("邊境牧羊犬辨識器")
 @st.cache_resource
 def get_model():
-    return load_model("models/border_collie_model.h5")
+    # 用新的 .keras 檔
+    return load_model("models/border_collie_model.keras")
 model = get_model()
 
 def preprocess(img):
